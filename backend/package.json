@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon index.js",
+    "dev": "nodemon index.js",
     "start": "node index.js"
   },
   "type": "module",
@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "food-admin": "file:..",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.0",
     "node-cron": "^4.0.7",
