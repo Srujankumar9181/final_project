@@ -25,6 +25,23 @@ const [totalItems, setTotalItems]=useState(0)
 
 
 
+    const [wish,Setwish]=useState("Good Night")
+              const getGreeting= function () {
+                    const now = new Date();
+                    const hour = now.getHours(); 
+                    if (hour >= 12 && hour < 16) {
+                      Setwish( "Good Afternoon ");
+                    } else if (hour >= 16 && hour < 23) {
+                      Setwish("Good Evening");
+                    } else if (hour >= 0 && hour < 12) {
+                      Setwish("Good Morning");
+                    }
+                }
+            useEffect(function(){
+              getGreeting()
+              
+            },[])
+
 
 
 
@@ -86,7 +103,7 @@ const [totalItems, setTotalItems]=useState(0)
       <div className={styles.header}>
 
       <p className={styles.wish}>
-        Good evening <br />{" "}
+        {wish} <br />{" "}
         <span className={styles.span}>place your order here</span>
       </p>
       </div>
